@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Krona+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --cor-primaria: cadetblue;
+  --cor-secundaria:  white;
+  --cor-terciaria: #ffa345;
+
+  --fonte-primaria:"Montserrat", serif
+  --fonte-secundaria:  "Adamina", serif;
+}
+
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+body{
+  background-color: var(--cor-primaria);
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.cabecalho{
+  padding: 1% 0% 0% 5%;
+}
+
+.cabecalho__menu{
+  display:flex;
+  gap: 8%;
+}
+
+.cabecalho__menu__link{
+  font-family: var(--fonte-primaria);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cor-secundaria);
+  text-decoration: none;
+}
+
+.cabecalho__menu__link:hover{
+  color: var(--cor-terciaria);
+}
+
+.apresentacao {
+  width: 100%;
+  height: 100%;
+  padding: 2% 0% 2% 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10%;
+  align-items: center;
+}
+
+.apresentacao__conteudo{
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.apresentacao__conteudo__titulo{
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.25rem;
+  color: var(--cor-secundaria);
+}
+
+h1 strong{
+  color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__paragrafo{
+  font-family: var(--fonte-secundaria);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__botoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  align-items: center;
+  gap: 1rem;
+}
+
+.apresentacao__botoes__subtitulo{
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-secundaria);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.apresentacao__botoes__link{
+  padding: 4%;
+  border: 2px solid var(--cor-terciaria);
+  width: 11rem;
+  height: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-family: var(--fonte-secundaria);
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.apresentacao__botoes__link:hover{
+  background-color: var(--cor-secundaria);
+  color:  var(--cor-terciaria);
+}
+
+.apresentacao__estilo {
+  position: relative;
+  height: auto;
+}
+
+.apresentacao__estilo__foto img {
+  border-radius: 5%;
+  width: 59%;
+  height: auto;
+  object-fit: cover; /* Para manter a proporção da imagem */
+  transform: translate(14%, -1%);
+}
+
+.apresentacao__estilo__moldura {
+  position: absolute;
+  width: 108%;
+  height: 110%;
+  filter: hue-rotate(180deg); /* Altera a cor da imagem para uma rotação de 180 graus no círculo de cores */  
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1; /* Para colocar a moldura atrás da foto */
+  transform: scale(0.91) translate(-5%, -108%);
+}
+
+ footer{
+  margin-top: 2%;
+  padding: 0.83rem;
+  background-color: var(--cor-terciaria);
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-family: var(--fonte-secundaria);
+  font-weight: 300;
+  font-style: normal;
+ }
+
+ @media (min-width: 300px) and (max-width: 770px){
+  .cabecalho{
+    padding: 10% 10% 2% 12%;
+  }
+
+  .cabecalho__menu{
+    display: flex;
+    justify-content: center;
+  }
+
+  .apresentacao{
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column-reverse;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+  }
+
+  .apresentacao__conteudo{
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .apresentacao__estilo {
+    position: relative;
+    height: auto;
+  }
+  
+  .apresentacao__estilo__foto img {
+    border-style: double;
+    border-color: var(--cor-terciaria);
+    padding: 2%;
+    border-radius: 5%;
+    width: 70%;
+    height: auto;
+    object-fit: cover; /* Para manter a proporção da imagem */
+    transform: translate(20%, 0%);
+  }
+  
+  .apresentacao__estilo__moldura {
+   display: none;
+  }
+}
+
+    
